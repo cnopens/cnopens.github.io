@@ -456,6 +456,21 @@
 <li>resources</li>
 </ol>
 <p><a target="_blank" rel="noopener" href="https://www.heson10.com/volantis/categories/hexo/">https://www.heson10.com/volantis/categories/hexo/</a></p>
+<h2 id="hexo-writing"><a href="#hexo-writing" class="headerlink" title="hexo writing"></a>hexo writing</h2><p><strong><em>layout</em></strong></p>
+<figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">layout 	佈局 	config.default_layout</span><br><span class="line">title 	標題 	文章的檔案名</span><br><span class="line"><span class="built_in">date</span> 	建立日期 	檔案建立日期</span><br><span class="line">updated 	更新日期 	檔案更新日期</span><br><span class="line">comments 	開啟文章的留言功能 	<span class="literal">true</span></span><br><span class="line">tags 	標籤（不適用於分頁） 	</span><br><span class="line">categories 	分類（不適用於分頁） 	</span><br><span class="line">permalink 	覆蓋文章網址 	</span><br><span class="line">excerpt 	Page excerpt <span class="built_in">in</span> plain <span class="built_in">text</span>. Use this plugin <span class="keyword">to</span> <span class="built_in">format</span> the <span class="built_in">text</span> 	</span><br><span class="line">disableNunjucks 	Disable rendering of Nunjucks tag &#123;&#123; &#125;&#125;/&#123;% %&#125; <span class="built_in">and</span> tag plugins when enabled 	</span><br><span class="line">lang 	<span class="built_in">Set</span> the <span class="built_in">language</span> <span class="keyword">to</span> override auto-detection 	Inherited <span class="keyword">from</span> <span class="variable">_config</span>.yml</span><br></pre></td></tr></table></figure>
+<p><strong><em>Catgory &amp; Tags</em></strong></p>
+<pre><code>分類和標籤只有文章才支援，您可以在 Front-matter 中設定。在其他系統中，分類和標籤可能聽起來很接近，但是在 Hexo 中有著決定性的差別：分類是有順序和階層性的，也就是說 Foo, Bar 不等於 Bar, Foo；而標籤沒有順序和階層。
+categories:
+- Diary
+tags:
+- PS3
+- Games
+此外我們可以透過 list 來對一篇文章同時定義多個分類。
+categories:
+- [Diary, PlayStation]
+- [Diary, Games]
+- [Life]
+</code></pre>
 
   
   
@@ -490,7 +505,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-12T11:27:53+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-12T13:37:48+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Apr 12, 2021</p>
@@ -569,6 +584,16 @@
   
     <div class="prev-next">
       
+        <a class='prev' href='/2021/04/14/discorvery-learning-stars-projects-md/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>discorvery-learning-stars-projects.md</p>
+          <p class='content'>discovery resources
+
+https://awesomeopensource.com/projects/shell
+
+
+(Basic Learning)[https://www....</p>
+        </a>
+      
       
         <a class='next' href='/2021/04/12/My-Frequently-Used-Resources/'>
           <p class='title'>My-Frequently-Used-Resources<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
@@ -616,7 +641,7 @@ Icon [https://cdn.jsdelivr.net/gh/twitter/twem...</p>
 
 
     <div class='content'>
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-writing"><span class="toc-text">hexo writing</span></a></li></ol>
     </div>
   </section>
 
