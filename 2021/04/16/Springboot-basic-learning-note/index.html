@@ -417,7 +417,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/read/">read</a>
+      <a class="category-link" href="/categories/springboot/">springboot</a>
     </a>
   </div>
 
@@ -456,11 +456,18 @@
 
 
   
-  <h1 id="Springboot-basic-learning-note"><a href="#Springboot-basic-learning-note" class="headerlink" title="Springboot-basic-learning-note"></a>Springboot-basic-learning-note</h1><h2 id="What-do-you-know-about-the-knowlegues-of-springboot"><a href="#What-do-you-know-about-the-knowlegues-of-springboot" class="headerlink" title="What do you know about the knowlegues of springboot"></a>What do you know about the knowlegues of springboot</h2><ol>
+  <h1 id="Springboot-basic-learning-note"><a href="#Springboot-basic-learning-note" class="headerlink" title="Springboot-basic-learning-note"></a>Springboot-basic-learning-note</h1><h2 id="What-should-you-know-about-the-knowlegues-of-springboot"><a href="#What-should-you-know-about-the-knowlegues-of-springboot" class="headerlink" title="What should you know about the knowlegues of springboot"></a>What should you know about the knowlegues of springboot</h2><h3 id="Version-Diff"><a href="#Version-Diff" class="headerlink" title="Version Diff"></a>Version Diff</h3><ol>
 <li>1.x vs 2.x etc difference</li>
 </ol>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">SpringBoot</span> <span class="number">2</span>基于Spring<span class="number">5</span>和JDK<span class="number">8</span>，而Spring <span class="number">1</span>x则用的是降低版本，带来的为可能是你的应用服务必须支持JDK<span class="number">8</span>。</span><br><span class="line"><span class="attribute">MVC</span>部分，有些定制类改动了，比如WebMvcConfiguer,由抽象类改为接口，这是因为JDK<span class="number">8</span>对接口有新的支持形式，统一错误处理，基类AbstarctErrorController也改动非常大。MVC里的视图渲染Freemaker视图解析器也有改动，默认情况下，它会自动加上ftl来来寻找模板。</span><br><span class="line"><span class="attribute">JPA</span>中，findById 返回了一个Optional对象，改动较大，会直接影响所有业务代码。</span><br><span class="line"><span class="attribute">Acutator</span>，本章SpringBoot<span class="number">1</span>.x和<span class="number">2</span>变化较大，默认情况，不再启用所有监控，另外编写自己监控信息，完全需要重写，HealthIndicator，EndPoint 变化很大。</span><br><span class="line"><span class="attribute">Spring</span> Security Oauth<span class="number">2</span>合并到Spring Security中。</span><br><span class="line"><span class="attribute">Tomcat</span> <span class="number">8</span>.<span class="number">5</span>或更高版本。</span><br></pre></td></tr></table></figure>
-
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><h3 id="Annotation"><a href="#Annotation" class="headerlink" title="Annotation"></a>Annotation</h3><ol>
+<li>@EnableWebSecurity func</li>
+</ol>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">load</span> the WebSecurityConfiguration <span class="keyword">class</span>, config the <span class="keyword">security</span> <span class="keyword">and</span> authentication <span class="keyword">policy</span>;</span><br><span class="line"><span class="keyword">load</span> the AuthenticationConfiguration, config the authentication <span class="keyword">info</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>lombok Annotation</li>
+</ol>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@EqualsAndHashCode<span class="function"><span class="params">(callSupper = <span class="literal">true</span>)</span> -&gt;</span> Application scenarios : entity extend .</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
   
   
@@ -495,10 +502,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-16T14:54:43+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-08T09:11:43+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Apr 16, 2021</p>
+    <p>更新于：May 8, 2021</p>
   </a>
 </div>
 
@@ -631,7 +638,7 @@ https://awesomeopensource.com/projects/shell
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-do-you-know-about-the-knowlegues-of-springboot"><span class="toc-text">What do you know about the knowlegues of springboot</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-should-you-know-about-the-knowlegues-of-springboot"><span class="toc-text">What should you know about the knowlegues of springboot</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Version-Diff"><span class="toc-text">Version Diff</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage"><span class="toc-text">Usage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Annotation"><span class="toc-text">Annotation</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -690,7 +697,7 @@ https://awesomeopensource.com/projects/shell
       
     
       
-        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
       
     
@@ -702,9 +709,9 @@ https://awesomeopensource.com/projects/shell
       
     
       
-        本站使用
+        Use
         <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.2.0" target="_blank" class="codename">Volantis</a>
-        作为主题
+        as theme
       
     
       
