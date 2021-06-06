@@ -488,6 +488,9 @@
 <p><strong><em>@Acessors(chain = true)</em></strong></p>
 <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> the target <span class="keyword">class</span> <span class="keyword">include</span> <span class="string">&quot;@Accessiors&quot;</span> the anotation, tools: import org.springframework.cglib.beans.BeanCopier; can&#x27;t use; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tools <span class="keyword">class</span>: copy properties between po  <span class="keyword">and</span> vo </span><br><span class="line"></span><br><span class="line">import org.springframework.cglib.beans.BeanCopier;</span><br><span class="line">   public static void copy<span class="constructor">Properties(Object <span class="params">source</span>,Object <span class="params">target</span>)</span>&#123;</span><br><span class="line">       BeanCopier copier = get<span class="constructor">BeanCopier(<span class="params">source</span>.<span class="params">getClass</span>()</span>, target.get<span class="constructor">Class()</span>);</span><br><span class="line">       copier.copy(source, target, null);  </span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   Right tools <span class="keyword">class</span>:</span><br><span class="line"></span><br><span class="line">   org.springframework.beans.<span class="module-access"><span class="module"><span class="identifier">BeanUtils</span>.</span></span>copy<span class="constructor">Properties(<span class="params">source</span>, <span class="params">target</span>)</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h2 id="lombok-common-annotation"><a href="#lombok-common-annotation" class="headerlink" title="lombok common annotation"></a>lombok common annotation</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="variable">@Entity</span>()  </span><br><span class="line"><span class="variable">@Data</span></span><br><span class="line"><span class="variable">@Builder</span></span><br><span class="line"><span class="variable">@Value</span></span><br><span class="line"><span class="variable">@AllArgsConstructor</span></span><br><span class="line"><span class="variable">@EqualsAndHashCode</span></span><br><span class="line">public class Demo&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//apply field annotation</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Apply <span class="attribute">methods</span>:</span><br><span class="line"></span><br><span class="line"><span class="variable">@Acessors</span>(chain = true)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="receive-the-springboot-ExecJar-pass-params"><a href="#receive-the-springboot-ExecJar-pass-params" class="headerlink" title="receive the springboot ExecJar pass params?"></a>receive the springboot ExecJar pass params?</h2><p>执行Jar动态传参切换ldap开关 for exmaple： java -Dldap.switch.flag=false xxx.jar</p>
+
   
   
     
@@ -521,10 +524,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-28T23:10:19+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-27T23:30:01+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Apr 28, 2021</p>
+    <p>更新于：May 27, 2021</p>
   </a>
 </div>
 
@@ -652,7 +655,7 @@ Webstorm Eslint: Please specify Node.js interpreterA: ...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Common-Questions"><span class="toc-text">Common Questions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lombok-common-annotation"><span class="toc-text">lombok common annotation</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Common-Questions"><span class="toc-text">Common Questions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lombok-common-annotation"><span class="toc-text">lombok common annotation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#receive-the-springboot-ExecJar-pass-params"><span class="toc-text">receive the springboot ExecJar pass params?</span></a></li></ol>
     </div>
   </section>
 

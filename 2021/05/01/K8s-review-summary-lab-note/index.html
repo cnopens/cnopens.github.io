@@ -456,8 +456,10 @@
 
 
   
-  <h1 id="K8s-review-summary-lab-note-K8S-review-summary-lab"><a href="#K8s-review-summary-lab-note-K8S-review-summary-lab" class="headerlink" title="K8s-review-summary-lab-note(K8S review summary lab)"></a>K8s-review-summary-lab-note(K8S review summary lab)</h1><p>for the beginner , install and do the lab </p>
-<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><h2 id="Prerequuesites"><a href="#Prerequuesites" class="headerlink" title="Prerequuesites:"></a>Prerequuesites:</h2><p>Hardware requirement: 2 c and 2 GB </p>
+  <h1 id="K8s-review-summary-lab-note-K8S-review-summary-lab"><a href="#K8s-review-summary-lab-note-K8S-review-summary-lab" class="headerlink" title="K8s-review-summary-lab-note(K8S review summary lab)"></a>K8s-review-summary-lab-note(K8S review summary lab)</h1><h2 id="docker-rel-tips"><a href="#docker-rel-tips" class="headerlink" title="docker rel tips"></a>docker rel tips</h2><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">docker中 启动所有的容器命令</span><br><span class="line">docker start <span class="constructor">$(<span class="params">docker</span> <span class="params">ps</span> -<span class="params">a</span> | <span class="params">awk</span> &#x27;&#123; <span class="params">print</span> $1&#125;&#x27; | <span class="params">tail</span> -<span class="params">n</span> +2)</span></span><br><span class="line"></span><br><span class="line">docker中    关闭所有的容器命令</span><br><span class="line">docker stop <span class="constructor">$(<span class="params">docker</span> <span class="params">ps</span> -<span class="params">a</span> | <span class="params">awk</span> &#x27;&#123; <span class="params">print</span> $1&#125;&#x27; | <span class="params">tail</span> -<span class="params">n</span> +2)</span></span><br><span class="line"></span><br><span class="line">docker中 删除所有的容器命令</span><br><span class="line">docker rm <span class="constructor">$(<span class="params">docker</span> <span class="params">ps</span> -<span class="params">a</span> | <span class="params">awk</span> &#x27;&#123; <span class="params">print</span> $1&#125;&#x27; | <span class="params">tail</span> -<span class="params">n</span> +2)</span></span><br><span class="line"></span><br><span class="line">docker中    删除所有的镜像</span><br><span class="line">docker rmi <span class="constructor">$(<span class="params">docker</span> <span class="params">images</span> | <span class="params">awk</span> &#x27;&#123;<span class="params">print</span> $3&#125;&#x27; |<span class="params">tail</span> -<span class="params">n</span> +2)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="keyword">the</span> beginner , install <span class="keyword">and</span> <span class="built_in">do</span> <span class="keyword">the</span> lab </span><br></pre></td></tr></table></figure>
+<h2 id="Prerequuesites"><a href="#Prerequuesites" class="headerlink" title="Prerequuesites:"></a>Prerequuesites:</h2><p>Hardware requirement: 2 c and 2 GB </p>
 <ol>
 <li>set hostname and update /etc/host file for local name resolution. </li>
 </ol>
@@ -530,10 +532,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-08T09:09:54+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-01T09:14:11+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：May 8, 2021</p>
+    <p>更新于：Jun 1, 2021</p>
   </a>
 </div>
 
@@ -663,7 +665,7 @@ live-template usage (shortcut key)
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#install"><span class="toc-text">install</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequuesites"><span class="toc-text">Prerequuesites:</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#docker-rel-tips"><span class="toc-text">docker rel tips</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#install"><span class="toc-text">install</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequuesites"><span class="toc-text">Prerequuesites:</span></a></li></ol>
     </div>
   </section>
 
