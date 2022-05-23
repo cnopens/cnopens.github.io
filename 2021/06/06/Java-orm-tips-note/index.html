@@ -472,7 +472,7 @@
 <li>camel problem<br>MybatisPlus 数据库字段使用驼峰命名法时碰到的问题</li>
 </ol>
 <p>假如有个实体类：<br>class User{<br> int userId;<br>}<br>按照规范，数据库User表里边对应userId的字段名应该为 user_id。<br>如果数据库的字段名也是userId的话（没有下划线），那么使用MybatisPlus的时候就会碰到映射问题，实际查询的时候默认是查询user_id。<br>解决办法：<br>.properties添加一行配置，关闭驼峰到下划线的映射即可<br> mybatis-plus.configuration.map-underscore-to-camel-case=false</p>
-<h3 id="Mybatis-典型配置信息"><a href="#Mybatis-典型配置信息" class="headerlink" title="Mybatis 典型配置信息"></a>Mybatis 典型配置信息</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">spring.datasource.url=jdbc:mysql:<span class="comment">//localhost:3306/springboot_mybatis_aotumatic_method?useUnicode=true&amp;characterEncoding=UTF-8</span></span><br><span class="line">spring.datasource.username=root</span><br><span class="line">spring.datasource.password=<span class="number">123456</span></span><br><span class="line">spring.datasource.driver-<span class="keyword">class</span>-name=com.mysql.jdbc.Driver</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//jpa</span></span><br><span class="line">########################################################</span><br><span class="line">spring.jpa.database=MYSQL</span><br><span class="line">spring.jpa.show-sql=true</span><br><span class="line">spring.jpa.hibernate.ddl-auto =update</span><br><span class="line">spring.jpa.hibernate.naming-strategy=org.hibernate.cfg.ImprovedNamingStrategy</span><br><span class="line">spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect</span><br><span class="line"></span><br><span class="line">mapper.plugin = tk.mybatis.mapper.generator.MapperPlugin</span><br><span class="line">mapper.Mapper = tk.mybatis.mapper.common.Mapper</span><br><span class="line">mybatis.type-aliases-package=com.study.model</span><br><span class="line">mybatis.mapper-locations=classpath:mapper<span class="comment">/*/*.xml</span></span><br><span class="line"><span class="comment">mapper.mappers=com.hlj.mybatisxml.utility.BaseMapper</span></span><br><span class="line"><span class="comment">mapper.not-empty=false</span></span><br><span class="line"><span class="comment">mapper.identity=MYSQL</span></span><br><span class="line"><span class="comment"></span></span><br></pre></td></tr></table></figure>
+<h3 id="Mybatis-classic-Configuration"><a href="#Mybatis-classic-Configuration" class="headerlink" title="Mybatis classic Configuration"></a>Mybatis classic Configuration</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">spring.datasource.url=jdbc:mysql:<span class="comment">//localhost:3306/springboot_mybatis_aotumatic_method?useUnicode=true&amp;characterEncoding=UTF-8</span></span><br><span class="line">spring.datasource.username=root</span><br><span class="line">spring.datasource.password=<span class="number">123456</span></span><br><span class="line">spring.datasource.driver-<span class="keyword">class</span>-name=com.mysql.jdbc.Driver</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//jpa</span></span><br><span class="line">########################################################</span><br><span class="line">spring.jpa.database=MYSQL</span><br><span class="line">spring.jpa.show-sql=true</span><br><span class="line">spring.jpa.hibernate.ddl-auto =update</span><br><span class="line">spring.jpa.hibernate.naming-strategy=org.hibernate.cfg.ImprovedNamingStrategy</span><br><span class="line">spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect</span><br><span class="line"></span><br><span class="line">mapper.plugin = tk.mybatis.mapper.generator.MapperPlugin</span><br><span class="line">mapper.Mapper = tk.mybatis.mapper.common.Mapper</span><br><span class="line">mybatis.type-aliases-package=com.study.model</span><br><span class="line">mybatis.mapper-locations=classpath:mapper<span class="comment">/*/*.xml</span></span><br><span class="line"><span class="comment">mapper.mappers=com.hlj.mybatisxml.utility.BaseMapper</span></span><br><span class="line"><span class="comment">mapper.not-empty=false</span></span><br><span class="line"><span class="comment">mapper.identity=MYSQL</span></span><br><span class="line"><span class="comment"></span></span><br></pre></td></tr></table></figure>
 
   
   
@@ -507,10 +507,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-06T22:44:26+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-09T22:52:00+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jun 6, 2021</p>
+    <p>更新于：Jun 9, 2021</p>
   </a>
 </div>
 
@@ -586,6 +586,13 @@
   
     <div class="prev-next">
       
+        <a class='prev' href='/2021/07/03/Ide-develop-tools-tips/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Ide-develop-tools-tips</p>
+          <p class='content'>Ide-develop-tools-tipsidea intellij deploy problemSshjJaas 
+
+JaasConfig{ com.sun.security.auth.mo...</p>
+        </a>
+      
       
         <a class='next' href='/2021/06/01/devops-vagrant-kbNote/'>
           <p class='title'>devops-vagrant-kbNote<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
@@ -632,7 +639,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#orm-usage-tips"><span class="toc-text">orm usage tips</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#how-to-define-the-database-table-and-fields-prefix"><span class="toc-text">how to define the database table and fields prefix?</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#mybatis-plus"><span class="toc-text">mybatis plus</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis-%E5%85%B8%E5%9E%8B%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF"><span class="toc-text">Mybatis 典型配置信息</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#orm-usage-tips"><span class="toc-text">orm usage tips</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#how-to-define-the-database-table-and-fields-prefix"><span class="toc-text">how to define the database table and fields prefix?</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#mybatis-plus"><span class="toc-text">mybatis plus</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis-classic-Configuration"><span class="toc-text">Mybatis classic Configuration</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -691,7 +698,7 @@
       
     
       
-        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
       
     
@@ -703,9 +710,9 @@
       
     
       
-        本站使用
+        Use
         <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.2.0" target="_blank" class="codename">Volantis</a>
-        作为主题
+        as theme
       
     
       
