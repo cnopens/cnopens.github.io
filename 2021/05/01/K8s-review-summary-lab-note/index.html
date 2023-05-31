@@ -499,6 +499,10 @@
 <li>Install kubeadm and other important packages.</li>
 </ol>
 <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">yum isntall -y kubelet kubeadm kubectl <span class="params">--disableexcludes=kubernetes</span></span><br><span class="line"></span><br><span class="line">systemctl enable <span class="params">--now</span> kubelet</span><br><span class="line"></span><br><span class="line"><span class="params">--------------------------------------------------------------------------</span></span><br><span class="line">kubeadm init <span class="params">--pod-network-cidr</span> 10.244.0.0/16 <span class="params">--apiserver-advertise-address=192</span>.168.3.110</span><br><span class="line">kubectl apply -f <span class="string">&quot;https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d &#x27;\n&#x27;)&quot;</span></span><br><span class="line"></span><br><span class="line">yum install base-completion</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;source &gt;(ckubectl completion bash)&quot;</span> &gt;&gt; ~<span class="string">/.bashrc</span></span><br></pre></td></tr></table></figure>
+<ol start="12">
+<li>ns rel operation</li>
+</ol>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">create namespace</span><br><span class="line"># kubectl create ns demo</span><br><span class="line"></span><br><span class="line">获取namespace</span><br><span class="line"># kubectl get ns</span><br><span class="line"></span><br><span class="line">获取当前<span class="keyword">context</span></span><br><span class="line"># kubectl <span class="keyword">config</span> current-<span class="keyword">context</span></span><br><span class="line"></span><br><span class="line">切换到 test-ns</span><br><span class="line"># kubectl <span class="keyword">config</span> set-<span class="keyword">context</span> $(kubectl <span class="keyword">config</span> current-<span class="keyword">context</span>) --namespace=demo</span><br><span class="line"></span><br><span class="line">切换回到<span class="keyword">default</span></span><br><span class="line"># kubectl <span class="keyword">config</span> set-<span class="keyword">context</span> $(kubectl <span class="keyword">config</span> current-<span class="keyword">context</span>) --namespace=<span class="keyword">default</span></span><br><span class="line"></span><br><span class="line">删除 namespace</span><br><span class="line"># kubectl delete namespaces demo</span><br><span class="line"></span><br></pre></td></tr></table></figure>
   
   
     
@@ -532,10 +536,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-01T09:14:11+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2023-04-13T11:39:55+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jun 1, 2021</p>
+    <p>更新于：Apr 13, 2023</p>
   </a>
 </div>
 
